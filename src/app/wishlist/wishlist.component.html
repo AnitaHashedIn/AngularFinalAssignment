@@ -1,0 +1,10 @@
+<ul class="List-Items"*ngFor="let item of WishlistData"  >
+  <li>
+    <span class="badge">{{item.title}}</span>
+    <span class="badge">{{item.author}}</span>
+    <span  class="badge">{{item.discounted_price}}</span>
+    <span class="badge">{{item.actual_price}}</span>
+    <button  class="badge" (click)="MoveToCart(item)">Move To Cart</button>
+    <button  class="badge" (click)="ClickonWishListItemDelete(item)"> Delete</button>
+  </li>
+</ul>
