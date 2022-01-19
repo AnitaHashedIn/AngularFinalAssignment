@@ -10,7 +10,6 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
-import { ItemDetailsComponent } from './item-details/item-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 @NgModule({
@@ -20,8 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     NavbarComponent,
     ListItemsComponent,
     WishlistComponent,
-    ProfileComponent,
-    ItemDetailsComponent
+    ProfileComponent
 
   ],
   imports: [
