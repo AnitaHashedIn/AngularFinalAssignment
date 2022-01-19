@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
 import { ItemsService ,ListItem} from '../items.service';
 export const SelectedItem =null;
 @Component({
@@ -18,7 +17,7 @@ export class ListItemsComponent implements OnInit {
    IsAddtoCartItem:boolean=false;
   WishList:ListItem[]=[];
   // WishListItem?:ListItem;
-  constructor(ItemService:ItemsService,private dialog: MatDialog) {
+  constructor(ItemService:ItemsService) {
     this.ItemListService = ItemService;
    }
 

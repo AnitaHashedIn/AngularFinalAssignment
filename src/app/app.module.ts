@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
@@ -12,9 +11,6 @@ import { ProfileComponent } from './profile/profile.component';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailsComponent } from './item-details/item-details.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatDialogModule } from '@angular/material/dialog';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 @NgModule({
@@ -30,18 +26,14 @@ import { MatCardModule } from '@angular/material/card';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
     MatToolbarModule,
     MatListModule,
-    MatGridListModule,
     FormsModule,
-    MatTableModule,
-    MatDialogModule,
     MatCardModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [Window],
 
   bootstrap: [AppComponent]
 })

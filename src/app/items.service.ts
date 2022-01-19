@@ -21,7 +21,7 @@ export class ItemsService {
   // AddtoCartItem:ListItem=[];
   WishList:ListItem[];
 
-  constructor(private http:HttpClient) {
+  constructor() {
     this.AddtoCartList =[];
     this.WishList =[];
      this.ListItemData=[{
@@ -224,13 +224,11 @@ export class ItemsService {
     }
     ];
   }
-  getAll(): Observable<ListItem[]> {
-    return this.http.get<ListItem[]>("../../assets/Data.json");
-  }
+  // getAll(): Observable<ListItem[]> {
+    // return this.http.get<ListItem[]>("../../assets/Data.json");
+  // }
 
   getCourses(){
-    // this.getAll().subscribe(data=>
-    //   this.ListItemData = data);
     return this.ListItemData.sort(((a,b) => (a.discounted_price > b.discounted_price) ? 1 : ((b.discounted_price > a.discounted_price) ? -1 : 0)));
   }
   getCartList(){
