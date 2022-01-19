@@ -14,6 +14,8 @@
   cursor: pointer;
   background-color: #EEE;
   height: 1.6em;
+  border: 1px solid blue;
+  padding: 0px;
   border-radius: 4px;
 }
 .List-Items:hover {
