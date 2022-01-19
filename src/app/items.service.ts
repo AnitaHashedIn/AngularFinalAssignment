@@ -231,13 +231,13 @@ export class ItemsService {
   getCourses(){
     // this.getAll().subscribe(data=>
     //   this.ListItemData = data);
-    return this.ListItemData;
+    return this.ListItemData.sort(((a,b) => (a.discounted_price > b.discounted_price) ? 1 : ((b.discounted_price > a.discounted_price) ? -1 : 0)));
   }
   getCartList(){
-    return this.AddtoCartList;
+    return this.AddtoCartList.sort(((a,b) => (a.discounted_price > b.discounted_price) ? 1 : ((b.discounted_price > a.discounted_price) ? -1 : 0)));
   }
   getWishlist(){
-    return this.WishList;
+    return this.WishList.sort(((a,b) => (a.discounted_price > b.discounted_price) ? 1 : ((b.discounted_price > a.discounted_price) ? -1 : 0)));
   }
 
   OnAddtocart(item: ListItem): void {
@@ -251,10 +251,6 @@ export class ItemsService {
       if (index !== -1) {
         this.ListItemData.splice(index, 1);
         }
-
-    // this.SelectedItem = item;
-    // this.Isselected = true;
-    // window.location.href= "http://localhost:4200/item-details"
   }
   OnDeleteItemcart(item: ListItem): void {
     const index: number = this.AddtoCartList.indexOf(item);
@@ -280,5 +276,10 @@ export class ItemsService {
         }
     // this.SelectedItem = item;
     // window.location.href= "http://localhost:4200/item-details"
+  }
+
+  OnCheckOut()
+  {
+    this.AddtoCartList =[];
   }
 }

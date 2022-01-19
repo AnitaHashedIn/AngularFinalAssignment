@@ -15,6 +15,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatTableModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    BrowserAnimationsModule
   ],
   providers: [],
 
