@@ -7,7 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
-  { path: 'list-items', component: ListItemsComponent },
+  { path: '', component: ListItemsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'wishlist', component: WishlistComponent },
   // { path: 'details', component: ItemDetailsComponent },
